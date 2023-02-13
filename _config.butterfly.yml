@@ -81,14 +81,14 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-# favicon: source/image/linmeng.png
+favicon: /image/favicon.ico
 # favicon: /img/favicon.png
-favicon: https://github.com/JoshuaZhengsurp/JoshuaZheng-s-blog/blob/main/source/image/linmeng.png?raw=true
+# favicon: https://github.com/JoshuaZhengsurp/JoshuaZheng-s-blog/blob/main/source/image/linmeng.png?raw=true
 
 # Avatar (頭像)
 avatar:
   # img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
-  img: https://raw.githubusercontent.com/JoshuaZhengsurp/JoshuaZheng-s-blog/main/source/image/favicon.ico
+  img: /image/linmeng.png
   effect: false
 
 # Disable all banner image

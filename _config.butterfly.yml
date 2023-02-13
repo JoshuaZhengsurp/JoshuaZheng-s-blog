@@ -81,8 +81,9 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /source/image/linmeng.png
-# favicon: /img/favicon.ico
+# favicon: source/image/linmeng.png
+# favicon: /img/favicon.png
+favicon: https://github.com/JoshuaZhengsurp/JoshuaZheng-s-blog/blob/main/source/image/linmeng.png?raw=true
 
 # Avatar (頭像)
 avatar:

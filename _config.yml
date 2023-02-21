@@ -2,18 +2,22 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+# 跳过渲染
+# skip_render:
+#   HTML/
+
 # Site
 title: JoshuaZheng's blog ## site's title
-subtitle: '' ## site's subtitle 
-description: ''
-keywords: 
+subtitle: 二次元宅 ## site's subtitle 
+description: 什么傻卵二刺螈
+keywords: 日常, 前端
 author: JoshuaZheng
 language: en
-timezone: '' 
+timezone: Asia/Shanghai 
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://130357.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -29,6 +33,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  HTML/
 
 # Writing
 new_post_name: :title.md # File name of new posts

@@ -100,7 +100,7 @@ index_img: true
 # top_img: orange
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: orange
+default_top_img:
 
 # The banner image of archive page
 archive_img:

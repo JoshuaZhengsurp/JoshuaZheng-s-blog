@@ -1,9 +1,12 @@
 ---
 title: Vue.js
 date: 2023-02-22 21:12:09
-updated:
-tags:
-categories:
+updated: 2023-02-22 21:12:09
+tags: 
+  - "Vue.js"
+  - "前端"
+categories: 
+  - "前端"
 keywords:
 description:
 top_img:

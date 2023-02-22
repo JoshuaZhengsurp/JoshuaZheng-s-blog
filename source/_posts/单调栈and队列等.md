@@ -1,6 +1,14 @@
 ---
 title: 关于单调栈、单调队列及双指针这档事
-data: 2023/2/21
+data: 2023-02-21
+update: 2023-02-22 21:12:09
+tag: 
+  - "acm"
+  - "算法"
+  - "数据结构"
+  - "简单优化算法"
+categories:
+  - "acm算法"
 ---
 
 ***“如果一个选手比你小还比你强，你就可以退役了。”**——（著名的（bushi））单调队列原理*（咳咳，假的，瞎编的（氵，求生欲满满））
@@ -17,7 +25,7 @@ data: 2023/2/21
 
 **栈**，一种后进先出的线性数据结构。
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\v2-8d25029b02920207f3c3004e9b3386db_1440w.jpg)
+![](../image/stack_queue/v2-8d25029b02920207f3c3004e9b3386db_1440w.jpg)
 
 
 
@@ -31,7 +39,7 @@ data: 2023/2/21
 
 将要入栈的元素：3，1，4，5，2，7。
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\202100202.jpg)
+![](../image/stack_queue/202100202.jpg)
 
 1. 第一个元素入栈：[3 ,
 
@@ -200,7 +208,7 @@ int main()
 
 一般来说的队列，就是一种先进先出的数据结构。
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\2-1FG91032244Y.png)
+![](../image/stack_queue/2-1FG91032244Y.png)
 
 不过为维护单调队列的单调性，这里我们使用的是双端队列（deque）。
 
@@ -212,7 +220,7 @@ int main()
 
    ......
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\20200712115758745.png)
+![](../image/stack_queue/20200712115758745.png)
 
 单调队列通常用于解决**滑动窗口**这类区间问题。例如**在长度为 n 的数组中，要求每个长度为 m 的区间的最值问题**。这个问题也可以采用ST表或线段树，时间复杂度为O(nlogn)；而采用单调队列的程序时间复杂度优化为O(n)  ，从效率上更优。
 
@@ -277,7 +285,7 @@ for (int i = 0; i < n;i++){
 
 （如下图所示，绿色框框为）
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\屏幕截图 2022-07-23 153126.jpg)
+![](../image/stack_queue/1.jpg)
 
 #### **分析：**
 
@@ -309,7 +317,7 @@ for(int i=0;i+k<n;i++){
 8 3
 1 3 -1 -3 5 3 6 7
 
-<img src="E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\屏幕截图 2022-07-23 154715.jpg" style="zoom:100%;" />
+![](../image/stack_queue/3.jpg)
 
 1.第一个滑动窗口**[1,3,-1]**：将元素入队并维护单调性：[-1，
 
@@ -425,7 +433,7 @@ int main()
 
 顾名思义，双指针法，就是采用两个“指针“：left_pointer(左指针)，right_pointer(右指针)。
 
-![](E:\360MoveData\Users\DELL\Desktop\c.c++\集训任务\pic\屏幕截图 2022-07-21 143953.jpg)
+![](../image/stack_queue/2.jpg)
 
 通过某种条件对区间增广或缩小，以此获得想要结果。
 

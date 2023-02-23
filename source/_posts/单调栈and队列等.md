@@ -8,7 +8,7 @@ tag:
   - "数据结构"
   - "简单优化算法"
 categories:
-  - "acm算法"
+  - "acm"
 mathjax: true
 ---
 

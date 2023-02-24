@@ -1,8 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated:
-tags: "vue.js"
+tags:
 categories:
 keywords:
 description:

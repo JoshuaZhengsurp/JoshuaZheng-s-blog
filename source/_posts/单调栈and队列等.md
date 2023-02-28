@@ -1,13 +1,12 @@
 ---
 title: 关于单调栈、单调队列及双指针这档事
-data: 2023-02-21
+data: 2023-02-21 21:00:00
 tag: 
   - "acm"
   - "算法"
   - "数据结构"
   - "简单优化算法"
-categories:
-  - "acm"
+categories: "acm"
 mathjax: true
 ---
 

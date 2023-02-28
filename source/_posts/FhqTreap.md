@@ -3,7 +3,11 @@ title: FhqTreap
 copyright_author: JoshuaZheng
 date: 2023-02-26 16:49:51
 tags:
-categories:
+ - "acm"
+ - "算法"
+ - "数据结构"
+ - "平衡二叉树"
+categories: "数据结构"
 keywords:
 description:
 top_img:

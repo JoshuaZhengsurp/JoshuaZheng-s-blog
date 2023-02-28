@@ -2,7 +2,8 @@
 title: hexo博客搭建ing
 date: 2023-02-21 23:21:48
 updated: 2023-02-22 21:12:09
-tags:
+tags: "hexo"
+categories: "hexo"
 ---
 
 ## 从入坑到弃坑，): (悲)

@@ -1,5 +1,5 @@
 ---
-title: computingGeometry
+title: 计算几何模板
 copyright_author: JoshuaZheng
 date: 2023-03-12 23:42:55
 tags:
@@ -9,7 +9,7 @@ tags:
 categories: "acm"
 keywords:
 description:
-top_img:
+top_img: /image/linmeng2.png
 comments:
 cover:
 toc:
@@ -28,6 +28,8 @@ aside:
 ---
 
 本文主要提供模板，并对一些函数进行说明，模板来源于网络或书籍
+
+
 
 ## 点、向量模板
 

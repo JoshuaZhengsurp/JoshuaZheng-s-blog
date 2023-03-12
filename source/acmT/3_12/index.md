@@ -26,7 +26,7 @@ highlight_shrink:
 
 本周主要重温并学习了计算几何相关知识和算法（凸包、旋转卡壳、半平面交、最近公共点对、最小圆覆盖等问题）。并且整理了相应的模板。
 
-模板如下：
+模板如下：[computingGeometry | JoshuaZheng's blog (130357.xyz)](https://130357.xyz/2023/03/12/computinggeometry/)
 
 除此之外，写了道矩阵快速幂（快忘得差不多了），还有后缀自动机相关的问题（算是温故）。
 

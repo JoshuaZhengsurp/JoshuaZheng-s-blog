@@ -9,9 +9,9 @@ tags:
 categories: "acm"
 keywords:
 description:
-top_img: /image/linmeng2.png
+top_img: 
 comments:
-cover:
+cover: /image/linmeng2.png
 toc:
 toc_number:
 toc_style_simple:

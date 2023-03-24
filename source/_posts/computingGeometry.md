@@ -1,5 +1,5 @@
 ---
-title: 计算几何模板
+title: 二维计算几何模板
 copyright_author: JoshuaZheng
 date: 2023-03-12 23:42:55
 tags:
@@ -28,6 +28,134 @@ aside:
 ---
 
 本文主要提供模板，并对一些函数进行说明，模板来源于网络或书籍
+
+
+
+## 简述模板中的函数：
+
+```cpp
+int sgn(db x);//判断x的符号，x>0，返回1；x==0，返回0；x<0，返回-1
+int dcmp(db x,db y);//比较x和y的大小（sgn(x-y)）
+
+Point类：{
+db dt2();//距离的平方
+db dt();//距离
+}
+db dist(Point a,Point b)//两点间距离
+db dist2(Point a,Point b)//两点间距离的平方
+
+vector类：（外置函数）
+Point unit(Point a);//单位向量
+db dot(Point a,Point b);//点乘
+db angle(Point a,Point b);//向量点夹角
+db cross(Point a,Point b);//叉乘
+db ABpos(Point a,Point b);//b向量在a向量的哪个方位
+db area2(Point a,Point b);//围成平行四边形面积
+Point rotate(Point a,db rad);//逆时针旋转rad角度
+bool parellel(Point a,Point b);//向量平行
+
+Line类：{
+//两点确定直线
+Line();//四种构造函数
+db len2();//线段长的平方
+db len();//线段长
+}；
+typedef Line Segment；
+int point_line_ralation(Point p,Line v)//判断点与直线位置关系：0：在v上，1：在v左侧，2：在右侧
+bool point_on_seg(Point p,Segment v)//判断点与线段位置关系：0:不在，1:在
+db dis_point_line(P,L)//点到直线距离
+Point point_line_proj(Point p,Line v)//点在直线投影
+Point point_line_symmetry(Point p,Line v)//点关于直线对称点
+db dis_point_seg(Point p,Segment v)//点到线段最短距离
+int line_relation(Line v1,Line v2)//两条直线的关系：1：重合，0：平行，2相交
+Point cross_point(Point a,Point b,Point c,Point d)//交点
+Point cross_point(Line v1,Line v2)//交点
+bool cross_segment(Point a,Point b,Point c,Point d)//判断线段是否相交：1 交，0 不交
+    
+polygon类：
+int point_in_polygon(Point pt,Point *p,int n)//点是否在多边形上
+db polygon_area(Point *p,int n)//多边形面积
+Point polygon_center(Point*p,int n)//多边形重心
+int polygon_convex_hull(Point*p,int n,Point*convexHull)//求凸包
+db get_longest(Point*ch,int cnt)//求完凸包后+旋转卡壳->求最远点对
+
+半平面交：
+Disline有向线段/直线类{
+    p，v，angle//点，向量，角度
+    operator<()//用于极角排序
+}
+bool onleft(Disline l,Point p)//点是否在l的左边
+Point cross_point_dis(Disline a,Disline b)//有向直线写法，求交点
+int halfplantintersection(Disline* L,int n,Point*poly)//求半平面交，返回凸多边形，和点个数
+```
+
+
+
+## 点、向量模板
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+#define db double
+typedef double dou;
+
+const dou PI=acos(-1.0);
+const dou eps=1e-8;
+int sgn(db x){
+    if(fabs(x)<eps)return 0;
+    else return x<0?-1:1;
+}
+int dcmp(db x,db y){
+    if(fabs(x-y)<eps)return 0;
+    else return x<y?-1:1;
+}
+
+struct Point
+{
+    db x,y;
+    Point(){}
+    Point(db x,db y):x(x),y(y){}
+
+    Point operator+(Point _p){return {x+_p.x,y+_p.y};}
+    Point operator*(Point _p){return {x*_p.x,y*_p.y};}
+    Point operator-(Point _p){return {x-_p.x,y-_p.y};}
+    Point operator/(Point _p){return {x/_p.x,y/_p.y};}
+    bool operator==(Point a){return sgn(x-a.x)==0&&sgn(y-a.y)==0;}
+
+    Point operator+(db _p){return {x+_p,y+_p};}
+    Point operator-(db _p){return {x-_p,y-_p};}
+    Point operator*(db _p){return {x*_p,y*_p};}
+    Point operator/(db _p){return {x/_p,y/_p};}
+
+    db dt2(){return x*x+y*y;}
+    db dt(){return sqrt(dt2());}
+};
+
+db dist(Point a,Point b){
+    return (a-b).dt();
+}
+db dist2(Point a,Point b){
+    return (a-b).dt2();
+}//距离的平方（防止sqrt再平方进度丢失）
+Point unit(Point a){
+    return Point(a.x/a.dt(),a.x/a.dt());
+}//单位向量
+
+//vector
+db dot(Point a,Point b){return a.x*b.x+a.y*b.y;}//点乘
+db angle(Point a,Point b){
+    return acos(dot(a,b)/a.dt()/b.dt());
+}
+
+db cross(Point a,Point b){return a.x*b.y-a.y*b.x;}//叉乘
+db ABpos(Point a,Point b){return sgn(cross(a,b));}//b在a的什么方位
+db area2(Point a,Point b,Point c){return cross(b-a,c-a);}
+Point rotate(Point a,db rad){
+    return Point(a.x*cos(rad)-a.y*sin(rad),a.x*sin(rad)+a.y*cos(rad));
+}//逆时针旋转rad角度
+bool parellel(Point a,Point b){return sgn(cross(a,b))==0;}//向量平行
+```
 
 
 

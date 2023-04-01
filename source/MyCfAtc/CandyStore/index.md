@@ -1,10 +1,11 @@
 ---
+layout: mycfatc
 title: CandyStore
 copyright_author: JoshuaZheng
 date: 2023-02-26 16:49:51
 ---
 
-![CandyStore](https://codeforces.com/contest/1798/problem/C)
+[CandyStore](https://codeforces.com/contest/1798/problem/C)
 
 贪心和数学（gcd和lcm那些）。
 题意，大概是有n种糖果，每种ai个，单价为bi，一捆有di的，一捆的等价为ci

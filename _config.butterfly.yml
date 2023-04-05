@@ -9,7 +9,7 @@ menu:
   分类: /categories/ || fas fa-folder-open
   我的HTML页面||fas fa-coffee:
     water: /water/ || fas fa-cocktail
-    TodoList: /TodoList/ || fas fa-rocket-launch
+    TodoList: /TodoList/ ||fa fa-light fa-fish
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video

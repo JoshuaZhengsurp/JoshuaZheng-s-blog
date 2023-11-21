@@ -36,6 +36,7 @@ skip_render:
 - "water/**"
 - "TodoList/**"
 - "TESTSDK/**"
+- "MusicPlayer/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts

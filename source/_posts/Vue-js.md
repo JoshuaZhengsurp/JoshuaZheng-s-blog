@@ -239,7 +239,9 @@ data:function(){
 ![](../image/Vue-js.assets/05.jpg)
 ![](../image/Vue-js.assets/05_1.jpg)
 
-``const vm=new Vue({})``
+```
+const vm=new Vue({})
+```
 
 1. data所有属性，最后都出现在vm上。
 2. vm身上所有属性，都是Vue原型上的所有属性，在Vue模板中都可以直接使用。
@@ -275,7 +277,9 @@ Object.defineProperty(person,age,{
 
 ### **定义**
 
-``通过一个对象代理另一个对象中属性的操作,非直接修改或赋予数据``
+```
+通过一个对象代理另一个对象中属性的操作,非直接修改或赋予数据
+```
 
 [点这里](./06数据代理/06_III_数据代理.html)
 
@@ -652,9 +656,6 @@ Diff算法：
 （2）当结构包含输入类时，可能造成界面问题。
 
 若不写key：以index作为key
-```
-
-```javascript
 //效率低
 <ul>
    <li v-for="(p,index) in persons":key="index">
@@ -696,9 +697,8 @@ methods:{
 
 ### [列表过滤](./11列表渲染/11_III列表过滤.html)
 
-``watch 监视写法``
-
-```javascript
+```
+watch 监视写法
 <input type="text" name="" id="" placeholder="请输入名字" v-model="keyword">
 <ul>
    <li v-for="(p,index) in filPersons":key="p.id">
@@ -731,11 +731,7 @@ watch:{
 //         return p.name.indexOf(newValue)!==-1;//返回新数组//' '->0
 //     })
 // }//未输入时，不显示任何信息。 
-```
-
-``computed（计算属性）写法``
-
-```javascript
+computed（计算属性）写法
 computed:{
    CfilPersons(){
      return this.persons.filter((p)=>{
@@ -776,7 +772,9 @@ computed:{
 
 <img src="Vue-js.assets/屏幕截图 2022-10-29 111345.jpg">
 
-``原生js简单模拟Vue监测时，需要借助额外全局对象（Observer）进行实时监测，避免在获取/修改属性时死循环。``
+```
+原生js简单模拟Vue监测时，需要借助额外全局对象（Observer）进行实时监测，避免在获取/修改属性时死循环。
+```
 
 ### [Vue.set()原理](12监测数据&原理/Vue.set().html)
 
@@ -835,7 +833,9 @@ vm.$set(target,pro,value);
 
 ### [v-html](15内置指令/02_v-html.html)
 
-``v-html作用：向指定节点中渲染包含html结构内容。``
+```
+v-html作用：向指定节点中渲染包含html结构内容。
+```
 
 1.  会替换掉节点中所有内容。
 2.  会识别html结构

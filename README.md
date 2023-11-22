@@ -1,3 +1,3 @@
 # JoshuaZheng-s-blog
 
-[博客URL](130357.xyz)
+[博客URL](https://130357.xyz)

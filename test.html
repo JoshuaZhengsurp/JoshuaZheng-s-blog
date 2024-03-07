@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg id='demo' width="300" height="300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+      <path
+        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+      />
+    </svg>
+    <script>
+      async function svgToPng(svgElement) {
+        const svgData = new XMLSerializer().serializeToString(svgElement);
+        // const svgData = await fetch(url).then((res) => res.text());
+        return new Promise((resolve) => {
+          const Img = new Image();
+          Img.onload = async function () {
+            const canvas = document.createElement("canvas");
+            canvas.width = Img.width;
+            canvas.height = Img.height;
+            const ctx = canvas.getContext("2d");
+            ctx?.drawImage(Img, 0, 0); // 绘制图像
+            const pngUrl = canvas.toDataURL("image/png");
+            resolve(pngUrl);
+          };
+          Img.src = "data:image/svg+xml;base64," + btoa(svgData); // 转成base64数据
+        });
+      }
+      async function exportSvgToPng() {
+        const svgElement = document.getElementById('demo');
+        const pngUrl = await svgToPng(svgElement);
+        const link = document.createElement("a");
+        link.download = "demo.png";
+        link.href = pngUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeClick(link);
+      }
+      const svgUrl = "E:\\360MoveData\\Users\\DELL\\Desktop\\demo.svg";
+      exportSvgToPng();
+    </script>
+  </body>
+</html>

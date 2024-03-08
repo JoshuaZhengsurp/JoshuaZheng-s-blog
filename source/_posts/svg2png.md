@@ -1,30 +1,29 @@
 ---
-title: 二维计算几何模板
+title: 利用canvas将svg转成png图片
 copyright_author: JoshuaZheng
 date: 2024-3-1 23:42:55
 tags:
 - '前端'
 - '图像操作'
 - 'canvas'
-  categories: "frontend"
-  keywords: "frontend"
-  description:
-  top_img: 
-  comments:
-  cover: /image/linmeng2.png
-  toc:
-  toc_number:
-  toc_style_simple:
-  copyright:
-  copyright_author_href:
-  copyright_url:
-  copyright_info:
-  mathjax:
-  katex:
-  aplayer:
-  highlight_shrink:
-  aside:
-
+categories: "frontend"
+keywords: "frontend"
+description:
+top_img: 
+comments:
+cover: /image/linmeng2.png
+toc:
+toc_number:
+toc_style_simple:
+copyright:
+copyright_author_href:
+copyright_url:
+copyright_info:
+mathjax:
+katex:
+aplayer:
+highlight_shrink:
+aside:
 ---
 
 近期工作时遇到这个问题，简单记录一下。

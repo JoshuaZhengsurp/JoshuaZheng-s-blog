@@ -12,6 +12,7 @@ menu:
     TodoList: /TodoList/ || fa fa-light fa-fish
     MusicPlayer: /MusicPlayer/ || fas fa-music
     TESTSDK: /TESTSDK/ || fa fa-solid fa-wand-magic-sparkles
+    dragger: /drag_demo/ || fa fa-solid fa-wand-magic-sparkles
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video

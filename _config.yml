@@ -38,6 +38,7 @@ skip_render:
 - "TESTSDK/**"
 - "MusicPlayer/**"
 - "drag_demo/**"
+- "image-collection/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts

@@ -13,6 +13,7 @@ menu:
     MusicPlayer: /MusicPlayer/ || fas fa-music
     TESTSDK: /TESTSDK/ || fa fa-solid fa-wand-magic-sparkles
     dragger: /drag_demo/ || fa fa-solid fa-wand-magic-sparkles
+    images: /image-collection/ || fas fa-coffee
   List||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
